@@ -1,0 +1,255 @@
+
+.topbutton {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.topbutton img {
+    background-color: white;
+
+    width: 2em; 
+    height: 2em;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.topbutton img:hover {
+    transform: scale(1.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: flex;
+    margin: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.95)),url(../GIFFILES/purplestars2.gif);
+    background-size: 5em;
+}
+
+.page{
+    width: 100%;
+    position: relative;
+    left: 0;
+    flex: 1;
+}
+
+
+footer{
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),url(../IMGFILES/bakeryPattern.png);
+    background-size: 20em;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    ul{
+        padding: 1em;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    li{
+        list-style-type: none;
+        padding: 0.5em;
+    }
+}
+
+
+/* IMAGE VIEW STUFF */
+
+.clickable-image {
+    max-width: 300px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.clickable-image:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.7);
+}
+
+
+/* Fullscreen overlay */
+.fullscreen-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    text-align: center;
+    padding: 2em;
+}
+
+.fullscreen-image {
+
+    max-height: 90%;
+    max-width: 90%;
+    margin-top: 5vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*GALLERY*/
+
+.image-row-2{
+    padding: 0em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    height: 30vh;
+    margin: 1em;
+    img{
+        border-radius: 1em;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        overflow:hidden;
+
+    }
+}
+
+.image-row-3{
+    padding: 0em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    height: 30vh;
+    margin: 1em;
+    img{
+        border-radius: 1em;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        overflow:hidden;
+
+    }
+}
+
+
+.image-row-4{
+    padding: 0em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    height: 30vh;
+    margin: 1em;
+    img{
+        border-radius: 1em;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        overflow:hidden;
+
+    }
+}
+
+a{
+    text-decoration: none;;
+}
+
+.navbar{
+    z-index: 100;
+
+    width: 5em; /* or 80px, adjust as needed */
+    min-width: 60px;
+    position: relative;
+
+    height: 100vh;
+    flex-direction: column;
+    padding: 1em 2em !important;
+
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0), rgb(50, 50, 50)),url(../IMGFILES/bakeryPattern.png);
+    background-size: 20em;
+    color: white;
+    a{
+        padding: 0em;
+        color: white;
+    }
+
+}
+
+.navbar ul{
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    width: 100%;
+}
+
+
+
+.navbar ul{
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    width: 100%;
+}
+
+
+.navbar ul li{
+    padding: 0.5em;
+
+    a{
+        border-radius: 0px !important;
+    }
+}
+
+.navbar .nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.nav-links.active{
+    max-height: 17em;
+}
